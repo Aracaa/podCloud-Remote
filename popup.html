@@ -1,0 +1,41 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked.
+ -->
+<html>
+  <head>
+    <title>podCloud Remote</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="background.js"></script>
+  </head>
+
+  <body>
+    <h1>h1</h1>
+    <div id="container">
+        <a href="javascript:play_pause()"><img src="play_pause.png" /></a>
+        <a class="btn btn-lg" id="next"></a>
+    </div>
+  </body>
+</html>

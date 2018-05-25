@@ -1,0 +1,39 @@
+{
+  "version": "0",
+  "manifest_version": 2,
+  "name": "podCloud Remote",
+  "description": "Extension permettant d'utiliser des raccourcis globaux pour la lecture sur podcloud.fr",
+  
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": "icon_mini.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [ "tabs", "https://*/*" ],
+  "commands": {
+    "pause": {
+      "description": "Play/Pause un Podcast",
+      "global": true,
+      "suggested_key": {
+        "default": "Ctrl+Shift+Down",
+        "mac": "Command+Shift+Down"
+      }
+    },
+    "next": {
+      "description": "Podcast Suivant",
+      "global": true,
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right",
+        "mac": "Command+Shift+Right"
+      }
+    }
+  }
+}
